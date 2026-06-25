@@ -8,9 +8,9 @@ import { Reveal } from "@/components/reveal";
 
 export function CTA() {
   return (
-    <section className="relative py-24 md:py-28">
+    <section className="relative section-pad-sm">
       <div className="container-px">
-        <div className="relative overflow-hidden rounded-3xl px-8 py-16 shadow-luxe md:px-16 md:py-20">
+        <div className="relative overflow-hidden rounded-2xl px-5 py-12 shadow-luxe sm:rounded-3xl sm:px-8 sm:py-16 md:px-16 md:py-20">
           <Image
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
             alt=""
@@ -41,12 +41,12 @@ export function CTA() {
               </p>
             </Reveal>
             <Reveal direction="up" delay={0.15}>
-              <div className="mt-9 flex flex-wrap items-center gap-4">
-                <Link href="/contact" className="btn-gold group">
+              <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+                <Link href="/contact" className="btn-gold group w-full sm:w-auto">
                   Request a Quote
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
-                <a href={`tel:${company.phoneRaw}`} className="btn-outline">
+                <a href={`tel:${company.phoneRaw}`} className="btn-outline w-full sm:w-auto">
                   <Phone className="h-4 w-4" />
                   {company.phone}
                 </a>

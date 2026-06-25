@@ -9,12 +9,12 @@ import { Reveal } from "@/components/reveal";
 
 export function AboutSection() {
   return (
-    <section className="relative overflow-hidden bg-[var(--background)] py-24 md:py-32">
+    <section className="relative overflow-hidden bg-[var(--background)] section-pad">
       <div className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-gold-400/5 blur-3xl" />
-      <div className="container-px grid items-center gap-14 lg:grid-cols-2">
+      <div className="container-px grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
         <div className="relative">
           <Reveal direction="right">
-            <div className="relative h-[420px] w-full overflow-hidden rounded-2xl shadow-luxe sm:h-[520px]">
+            <div className="relative h-[320px] w-full overflow-hidden rounded-2xl shadow-luxe sm:h-[420px] md:h-[520px]">
               <Image
                 src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80"
                 alt="SHELLYAND construction team at work"
@@ -57,7 +57,7 @@ export function AboutSection() {
             </span>
           </Reveal>
           <Reveal direction="up" delay={0.05}>
-            <h2 className="mt-4 font-display text-3xl font-bold leading-tight tracking-tight text-navy-900 text-balance dark:text-white sm:text-4xl">
+            <h2 className="mt-4 font-display text-2xl font-bold leading-tight tracking-tight text-navy-900 text-balance dark:text-white sm:text-3xl md:text-4xl">
               A legacy of building with{" "}
               <span className="text-gradient-gold">integrity and precision</span>
             </h2>

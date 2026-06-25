@@ -30,7 +30,7 @@ export default function ServicesPage() {
 
       <ServicesSection detailed />
 
-      <section className="bg-[var(--background)] py-24 md:py-32">
+      <section className="bg-[var(--background)] section-pad">
         <div className="container-px">
           <SectionHeading
             eyebrow="In Detail"
@@ -43,14 +43,14 @@ export default function ServicesPage() {
             description="Each service is backed by dedicated specialists, premium materials, and rigorous quality standards."
           />
 
-          <div className="mt-16 space-y-20">
+          <div className="mt-10 space-y-14 sm:mt-16 sm:space-y-20">
             {services.map((service, i) => (
               <div
                 key={service.slug}
                 className="grid items-center gap-10 lg:grid-cols-2"
               >
                 <Reveal direction={i % 2 === 0 ? "right" : "left"} className={i % 2 === 1 ? "lg:order-2" : ""}>
-                  <div className="relative h-80 overflow-hidden rounded-2xl shadow-luxe">
+                  <div className="relative h-64 overflow-hidden rounded-2xl shadow-luxe sm:h-72 md:h-80">
                     <Image
                       src={service.image}
                       alt={service.title}
@@ -72,7 +72,7 @@ export default function ServicesPage() {
                     <p className="mt-4 text-base leading-relaxed text-navy-500 dark:text-white/65">
                       {service.description}
                     </p>
-                    <ul className="mt-6 grid grid-cols-2 gap-3">
+                    <ul className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                       {service.features.map((f) => (
                         <li
                           key={f}

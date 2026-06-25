@@ -35,7 +35,7 @@ export function SectionHeading({
       <Reveal direction="up" delay={0.05}>
         <h2
           className={cn(
-            "mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-balance sm:text-4xl md:text-[2.75rem]",
+            "mt-3 font-display text-2xl font-bold leading-[1.1] tracking-tight text-balance sm:mt-4 sm:text-3xl md:text-[2.75rem]",
             light ? "text-white" : "text-navy-900 dark:text-white"
           )}
         >
@@ -46,7 +46,7 @@ export function SectionHeading({
         <Reveal direction="up" delay={0.1}>
           <p
             className={cn(
-              "mt-5 text-base leading-relaxed sm:text-lg",
+              "mt-4 text-sm leading-relaxed sm:mt-5 sm:text-base md:text-lg",
               light ? "text-white/70" : "text-navy-500 dark:text-white/60"
             )}
           >

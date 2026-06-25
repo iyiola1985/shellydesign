@@ -6,7 +6,7 @@ import { StaggerGroup, StaggerItem } from "@/components/reveal";
 
 export function Process() {
   return (
-    <section className="relative bg-[var(--background)] py-24 md:py-32">
+    <section className="relative bg-[var(--background)] section-pad">
       <div className="container-px">
         <SectionHeading
           eyebrow="How We Work"
@@ -19,7 +19,7 @@ export function Process() {
           description="Every project follows a transparent, structured approach designed to keep you informed and in control."
         />
 
-        <StaggerGroup className="relative mt-16 grid gap-8 md:grid-cols-4">
+        <StaggerGroup className="relative mt-10 grid gap-8 sm:mt-16 md:grid-cols-4">
           <div className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-gold-400/40 to-transparent md:block" />
           {processSteps.map((step) => (
             <StaggerItem key={step.step}>

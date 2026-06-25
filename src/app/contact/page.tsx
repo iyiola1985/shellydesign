@@ -48,9 +48,9 @@ export default function ContactPage() {
         image="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
       />
 
-      <section className="bg-[var(--background)] py-24 md:py-28">
+      <section className="bg-[var(--background)] section-pad-sm">
         <div className="container-px">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
             {details.map((d, i) => {
               const content = (
                 <div className="card-surface group h-full rounded-2xl p-7 transition-shadow duration-300 hover:shadow-luxe">
@@ -83,7 +83,7 @@ export default function ContactPage() {
             })}
           </div>
 
-          <div className="mt-16 grid gap-10 lg:grid-cols-2">
+          <div className="mt-10 grid gap-8 sm:mt-16 lg:grid-cols-2 lg:gap-10">
             <Reveal direction="right">
               <ContactForm />
             </Reveal>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                   <iframe
                     title="SHELLYAND LLC location"
                     src={company.mapEmbed}
-                    className="h-[360px] w-full grayscale-[0.2]"
+                    className="h-[280px] w-full grayscale-[0.2] sm:h-[320px] md:h-[360px]"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     allowFullScreen

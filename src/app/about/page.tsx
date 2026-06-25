@@ -49,8 +49,8 @@ export default function AboutPage() {
         image="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1920&q=80"
       />
 
-      <section className="bg-[var(--background)] py-16">
-        <div className="container-px grid grid-cols-2 gap-8 lg:grid-cols-4">
+      <section className="bg-[var(--background)] py-12 sm:py-16">
+        <div className="container-px grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
           {stats.map((stat) => (
             <Reveal key={stat.label} direction="up">
               <div className="text-center">
@@ -68,7 +68,7 @@ export default function AboutPage() {
 
       <AboutSection />
 
-      <section className="bg-[var(--muted)] py-24 md:py-32">
+      <section className="bg-[var(--muted)] section-pad">
         <div className="container-px">
           <SectionHeading
             eyebrow="Our Journey"
@@ -79,7 +79,7 @@ export default function AboutPage() {
             }
             description="From humble beginnings to a regional leader, every milestone reflects our dedication to quality."
           />
-          <StaggerGroup className="mx-auto mt-16 max-w-3xl">
+          <StaggerGroup className="mx-auto mt-10 max-w-3xl sm:mt-16">
             {timeline.map((item) => (
               <StaggerItem key={item.year}>
                 <div className="relative flex gap-6 pb-10 last:pb-0">
@@ -104,10 +104,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[var(--background)] py-24 md:py-32">
-        <div className="container-px grid items-center gap-14 lg:grid-cols-2">
+      <section className="relative overflow-hidden bg-[var(--background)] section-pad">
+        <div className="container-px grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <Reveal direction="right">
-            <div className="relative h-[460px] overflow-hidden rounded-2xl shadow-luxe">
+            <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-luxe sm:h-[400px] md:h-[460px]">
               <Image
                 src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80"
                 alt={`${company.ceo}, CEO of ${company.name}`}
@@ -125,7 +125,7 @@ export default function AboutPage() {
               </span>
             </Reveal>
             <Reveal direction="up" delay={0.05}>
-              <h2 className="mt-4 font-display text-3xl font-bold leading-tight tracking-tight text-navy-900 text-balance dark:text-white sm:text-4xl">
+              <h2 className="mt-4 font-display text-2xl font-bold leading-tight tracking-tight text-navy-900 text-balance dark:text-white sm:text-3xl md:text-4xl">
                 Leadership built on vision and values
               </h2>
             </Reveal>

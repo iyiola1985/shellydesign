@@ -57,10 +57,10 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
 export function ProjectsSection({ showHeading = true }: { showHeading?: boolean }) {
   return (
-    <section className="relative overflow-hidden bg-[var(--background)] py-24 md:py-32">
+    <section className="relative overflow-hidden bg-[var(--background)] section-pad">
       <div className="container-px">
         {showHeading && (
-          <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+          <div className="mt-10 flex flex-col items-start justify-between gap-6 sm:mt-16 md:flex-row md:items-end md:gap-8">
             <SectionHeading
               align="left"
               eyebrow="Selected Work"
@@ -83,7 +83,7 @@ export function ProjectsSection({ showHeading = true }: { showHeading?: boolean 
           </div>
         )}
 
-        <div className="mt-16 columns-1 gap-6 sm:columns-2 lg:columns-3">
+        <div className="mt-10 columns-1 gap-6 sm:mt-16 sm:columns-2 lg:columns-3">
           {projects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />
           ))}

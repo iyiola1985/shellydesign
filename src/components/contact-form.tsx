@@ -61,7 +61,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-2xl border bg-[var(--card)] p-7 shadow-luxe sm:p-9"
+      className="rounded-2xl border bg-[var(--card)] p-5 shadow-luxe sm:p-7 md:p-9"
     >
       <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white">
         Request a Free Quote

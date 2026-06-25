@@ -48,7 +48,7 @@ export default function EquipmentPage() {
         image="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1920&q=80"
       />
 
-      <section className="bg-[var(--background)] py-24 md:py-32">
+      <section className="bg-[var(--background)] section-pad">
         <div className="container-px">
           <SectionHeading
             eyebrow="Our Inventory"
@@ -61,7 +61,7 @@ export default function EquipmentPage() {
             description="From earthmoving to finishing, we supply the right equipment and materials to get the job done safely and efficiently."
           />
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 sm:mt-16 sm:gap-8 md:grid-cols-2">
             {equipmentCategories.map((cat, i) => (
               <Reveal key={cat.title} direction="up" delay={(i % 2) * 0.1}>
                 <article className="group overflow-hidden rounded-2xl border bg-[var(--card)] shadow-sm transition-shadow duration-300 hover:shadow-luxe">
@@ -82,7 +82,7 @@ export default function EquipmentPage() {
                     <p className="text-sm leading-relaxed text-navy-500 dark:text-white/60">
                       {cat.description}
                     </p>
-                    <ul className="mt-5 grid grid-cols-2 gap-3">
+                    <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
                       {cat.items.map((item) => (
                         <li
                           key={item}
@@ -103,7 +103,7 @@ export default function EquipmentPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-navy-950 py-24 text-white md:py-32">
+      <section className="relative overflow-hidden bg-navy-950 section-pad text-white">
         <div className="pointer-events-none absolute inset-0 bg-grid-dark [background-size:54px_54px] opacity-25" />
         <div className="pointer-events-none absolute -left-20 top-10 h-72 w-72 rounded-full bg-gold-500/10 blur-3xl" />
         <div className="container-px relative">
@@ -118,7 +118,7 @@ export default function EquipmentPage() {
             }
             description="We make sourcing equipment effortless so you can focus on building."
           />
-          <StaggerGroup className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <StaggerGroup className="mt-10 grid gap-4 sm:mt-16 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
             {benefits.map((b) => (
               <StaggerItem key={b.title}>
                 <div className="glass-dark h-full rounded-2xl p-7">

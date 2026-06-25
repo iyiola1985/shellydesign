@@ -23,15 +23,15 @@ export function ProjectsGallery() {
   const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <section className="bg-[var(--background)] py-20 md:py-28">
+    <section className="bg-[var(--background)] section-pad-sm">
       <div className="container-px">
-        <div className="mb-12 flex flex-wrap justify-center gap-3">
+        <div className="-mx-4 mb-10 flex gap-2 overflow-x-auto px-4 pb-2 no-scrollbar sm:mx-0 sm:mb-12 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:pb-0">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActive(cat)}
               className={cn(
-                "rounded-full border px-5 py-2.5 text-sm font-medium transition-all duration-300",
+                "shrink-0 rounded-full border px-4 py-2.5 text-sm font-medium transition-all duration-300 sm:px-5",
                 active === cat
                   ? "border-gold-400 bg-gold-400 text-navy-950 shadow-gold-glow"
                   : "border-[var(--border)] text-navy-600 hover:border-gold-400 hover:text-gold-500 dark:text-white/70"

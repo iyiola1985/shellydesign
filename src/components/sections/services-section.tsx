@@ -16,7 +16,7 @@ export function ServicesSection({
   detailed?: boolean;
 }) {
   return (
-    <section className="relative bg-[var(--muted)] py-24 md:py-32">
+    <section className="relative bg-[var(--muted)] section-pad">
       <div className="container-px">
         {showHeading && (
           <SectionHeading
@@ -31,7 +31,7 @@ export function ServicesSection({
           />
         )}
 
-        <StaggerGroup className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerGroup className="mt-10 grid gap-5 sm:mt-16 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {services.map((service) => (
             <StaggerItem key={service.slug}>
               <motion.article
@@ -62,7 +62,7 @@ export function ServicesSection({
                   </p>
 
                   {detailed && (
-                    <ul className="mt-5 grid grid-cols-2 gap-2">
+                    <ul className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3">
                       {service.features.map((f) => (
                         <li
                           key={f}

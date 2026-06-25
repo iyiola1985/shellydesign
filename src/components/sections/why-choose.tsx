@@ -8,7 +8,7 @@ import { StaggerGroup, StaggerItem } from "@/components/reveal";
 
 export function WhyChoose() {
   return (
-    <section className="relative overflow-hidden bg-navy-950 py-24 text-white md:py-32">
+    <section className="relative overflow-hidden bg-navy-950 section-pad text-white">
       <div className="absolute inset-0">
         <Image
           src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
@@ -34,7 +34,7 @@ export function WhyChoose() {
           description="We earn our clients' trust through consistency, transparency, and an obsession with quality at every stage."
         />
 
-        <StaggerGroup className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerGroup className="mt-10 grid gap-4 sm:mt-16 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
           {whyChooseUs.map((item) => (
             <StaggerItem key={item.title}>
               <motion.div

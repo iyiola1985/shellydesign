@@ -19,7 +19,7 @@ export function PageHeader({
   crumb: string;
 }) {
   return (
-    <section className="relative flex min-h-[60vh] items-center overflow-hidden pt-24">
+    <section className="relative flex min-h-[52vh] items-center overflow-hidden pt-20 sm:min-h-[58vh] sm:pt-24 md:min-h-[60vh]">
       <div className="absolute inset-0">
         <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
         <motion.div
@@ -33,7 +33,7 @@ export function PageHeader({
       <div className="absolute inset-0 bg-gradient-to-r from-navy-950/80 to-transparent" />
       <div className="pointer-events-none absolute inset-0 bg-grid-dark [background-size:56px_56px] opacity-20" />
 
-      <div className="container-px relative py-16">
+      <div className="container-px relative py-12 sm:py-16">
         {eyebrow && (
           <motion.span
             initial={{ opacity: 0, y: 16 }}
@@ -49,7 +49,7 @@ export function PageHeader({
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.05 }}
-          className="mt-4 max-w-4xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-white text-balance sm:text-5xl md:text-6xl"
+          className="mt-3 max-w-4xl font-display text-3xl font-bold leading-[1.05] tracking-tight text-white text-balance sm:mt-4 sm:text-4xl md:text-5xl lg:text-6xl"
         >
           {title}
         </motion.h1>

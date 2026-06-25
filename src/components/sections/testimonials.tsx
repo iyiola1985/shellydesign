@@ -8,7 +8,7 @@ import { StaggerGroup, StaggerItem } from "@/components/reveal";
 
 export function Testimonials() {
   return (
-    <section className="relative bg-[var(--muted)] py-24 md:py-32">
+    <section className="relative bg-[var(--muted)] section-pad">
       <div className="container-px">
         <SectionHeading
           eyebrow="Client Voices"
@@ -21,7 +21,7 @@ export function Testimonials() {
           description="Our reputation is built on relationships. Here's what our clients say about working with SHELLYAND LLC."
         />
 
-        <StaggerGroup className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <StaggerGroup className="mt-10 grid gap-5 sm:mt-16 md:grid-cols-2 xl:grid-cols-4">
           {testimonials.map((t) => (
             <StaggerItem key={t.name}>
               <motion.figure

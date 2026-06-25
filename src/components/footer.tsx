@@ -19,7 +19,7 @@ export function Footer() {
       <div className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-navy-500/20 blur-3xl" />
 
       <div className="container-px relative">
-        <div className="grid gap-12 border-b border-white/10 py-16 lg:grid-cols-12">
+        <div className="grid gap-10 border-b border-white/10 py-12 sm:gap-12 sm:py-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-3">
               <span className="grid h-12 w-12 place-items-center rounded-xl border border-gold-400/40 bg-gold-400/10 text-xl font-bold text-gold-400">
@@ -123,7 +123,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 py-7 text-sm text-white/50 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-4 py-6 text-center text-sm text-white/50 sm:flex-row sm:py-7 sm:text-left">
           <p>
             &copy; {year} {company.name}. All rights reserved.
           </p>

@@ -40,14 +40,14 @@ export function Navbar() {
         "fixed inset-x-0 top-0 z-50 transition-all duration-500",
         scrolled
           ? "glass border-b border-black/5 py-2 shadow-sm dark:border-white/10"
-          : "border-b border-transparent py-4"
+          : "border-b border-transparent py-3 sm:py-4"
       )}
     >
       <nav className="container-px flex items-center justify-between gap-4">
-        <Link href="/" className="group flex items-center gap-3">
+        <Link href="/" className="group flex min-w-0 items-center gap-2 sm:gap-3">
           <span
             className={cn(
-              "grid h-11 w-11 place-items-center rounded-xl border text-lg font-bold transition-colors duration-300",
+              "grid h-10 w-10 shrink-0 place-items-center rounded-xl border text-base font-bold transition-colors duration-300 sm:h-11 sm:w-11 sm:text-lg",
               onDark
                 ? "border-white/25 bg-white/10 text-white"
                 : "border-gold-400/40 bg-gold-400/10 text-gold-500 dark:text-gold-400"
@@ -55,10 +55,10 @@ export function Navbar() {
           >
             S
           </span>
-          <span className="flex flex-col leading-none">
+          <span className="flex min-w-0 flex-col leading-none">
             <span
               className={cn(
-                "font-display text-lg font-bold tracking-tight transition-colors duration-300",
+                "truncate font-display text-base font-bold tracking-tight transition-colors duration-300 sm:text-lg",
                 onDark ? "text-white" : "text-navy-900 dark:text-white"
               )}
             >

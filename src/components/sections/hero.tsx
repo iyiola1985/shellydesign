@@ -20,7 +20,7 @@ export function Hero() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
 
   return (
-    <section ref={ref} className="relative h-[100svh] min-h-[680px] w-full overflow-hidden">
+    <section ref={ref} className="relative h-[100svh] min-h-[600px] w-full overflow-hidden sm:min-h-[680px]">
       <motion.div style={{ scale }} className="absolute inset-0">
         <video
           className="h-full w-full object-cover"
@@ -40,7 +40,7 @@ export function Hero() {
 
       <motion.div
         style={{ y, opacity }}
-        className="container-px relative flex h-full flex-col justify-center pt-24"
+        className="container-px relative flex h-full flex-col justify-center pb-6 pt-20 sm:pb-8 sm:pt-24"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ export function Hero() {
           <span className="sm:hidden">320+ projects delivered</span>
         </motion.div>
 
-        <h1 className="font-display text-[2.7rem] font-bold leading-[0.98] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[5.4rem]">
+        <h1 className="font-display text-[2.25rem] font-bold leading-[0.98] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[5.4rem]">
           <span className="block overflow-hidden">
             {headlineTop.map((word, i) => (
               <motion.span
@@ -90,7 +90,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
-          className="mt-7 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg"
+          className="mt-6 max-w-xl text-sm leading-relaxed text-white/75 sm:mt-7 sm:text-base md:text-lg"
         >
           Delivering quality construction, interior decoration, and equipment supply solutions
           across residential and commercial projects.
@@ -100,13 +100,13 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.85 }}
-          className="mt-9 flex flex-wrap items-center gap-4"
+          className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"
         >
-          <Link href="/contact" className="btn-gold group">
+          <Link href="/contact" className="btn-gold group w-full sm:w-auto">
             Request a Quote
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
-          <Link href="/projects" className="btn-outline group">
+          <Link href="/projects" className="btn-outline group w-full sm:w-auto">
             <Play className="h-4 w-4 fill-current" />
             View Projects
           </Link>
@@ -116,11 +116,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-14 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-6 border-t border-white/15 pt-8 sm:grid-cols-4"
+          className="mt-10 grid max-w-2xl grid-cols-2 gap-x-4 gap-y-5 border-t border-white/15 pt-6 sm:mt-14 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-6 sm:pt-8"
         >
           {stats.map((stat) => (
             <div key={stat.label}>
-              <div className="font-display text-3xl font-bold text-white sm:text-4xl">
+              <div className="font-display text-2xl font-bold text-white sm:text-3xl md:text-4xl">
                 {stat.value}
               </div>
               <div className="mt-1 text-xs font-medium uppercase tracking-wider text-white/55">
